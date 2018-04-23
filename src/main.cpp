@@ -18,6 +18,10 @@ int main() {
 //    print_ip((uint32_t)pow(2,16)-1);
 //
 
-    std::cout << is_stl_container<int>::value << std::endl;
+//    std::cout << is_stl_container<std::set<int>>::value << std::endl;
+    print_ip(-1);
+    print_ip(std::set<int> {4,2,3,1});
+    print_ip("465");
+
     return 0;
 }
