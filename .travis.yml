@@ -2,9 +2,7 @@ language: cpp
 before_script:
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
-- sudo apt-get install -qq g++-7 libboost-test1.54-dev doxygen graphviz
-- sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 90
-- sudo apt-get install libspdlog-dev -y
+- sudo apt-get install libboost-test-dev
 script:
 - cmake . -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
 - cmake .
