@@ -6,20 +6,23 @@
 #include <sstream>
 
 // Функция должна распознавать нужные типы фундаментальных данных
-BOOST_AUTO_TEST_CASE(PrintFundamentals) {
+BOOST_AUTO_TEST_SUITE(test_split_suite)
 
-        std::stringstream result;
+BOOST_AUTO_TEST_CASE(g) {
 
-        print_ip(char(-1));
-        print_ip(short(0));
-        print_ip(2130706433);
-        print_ip(long(8875824491850138409));
+//        std::stringstream result;
 
-        std::string outputData =
-        "255"
-        "0.0"
-        "127.0.0.1"
-        "123.45.67.89.101.112.131.41";
+//        print_ip(char(-1));
+//        print_ip(short(0));
+//        print_ip(2130706433);
+//        print_ip(long(8875824491850138409));
+//
+//        std::string outputData =
+//        "255"
+//        "0.0"
+//        "127.0.0.1"
+//        "123.45.67.89.101.112.131.41";
 
-        BOOST_CHECK(result.str() != outputData);
+        BOOST_CHECK(false);
 }
+BOOST_AUTO_TEST_SUITE_END()

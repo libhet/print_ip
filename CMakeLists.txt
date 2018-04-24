@@ -1,10 +1,10 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.9)
 project(print_ip)
 
 IF($ENV{TRAVIS_BUILD_NUMBER})
-    project(allocator VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+    project(print_ip VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 ELSE()
-    project(allocator VERSION 0.0.1)
+    project(print_ip VERSION 0.0.1)
 ENDIF()
 
 set(CMAKE_CXX_STANDARD 14)
