@@ -8,7 +8,7 @@
 // Функция должна распознавать нужные типы фундаментальных данных
 BOOST_AUTO_TEST_SUITE(test_split_suite)
 
-BOOST_AUTO_TEST_CASE(g) {
+BOOST_AUTO_TEST_CASE("g") {
 
 //        std::stringstream result;
 
