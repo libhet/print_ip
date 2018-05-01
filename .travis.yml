@@ -1,12 +1,13 @@
 language: cpp
 before_script:
-- echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
+- echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
-- sudo apt-get install libboost-all-dev
+- sudo apt-get install libboost-test-dev
 script:
 - cmake . -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON -DBoost_DEBUG=ON
 - cmake .
 - cmake --build .
+- cmake --build . --target test
 - cmake --build . --target package
 - sudo dpkg -i print_ip-*.deb && pwd && ls -l
 deploy:

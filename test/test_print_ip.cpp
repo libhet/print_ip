@@ -1,4 +1,4 @@
-#define BOOST_TEST_MODULE BOOST_TEST_Print_ip
+#define BOOST_TEST_MAIN
 
 #include <boost/test/unit_test.hpp>
 
