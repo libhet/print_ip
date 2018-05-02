@@ -1,5 +1,4 @@
-if(BUILD_TESTING)
-project(tests)
+#if(BUILD_TESTING)
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
@@ -15,7 +14,7 @@ set_target_properties(test_print_ip PROPERTIES
             INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIRS}
 )
 
-target_link_libraries(test_print_ip ${Boost_LIBRARIES} print_ip)
+target_link_libraries(test_print_ip ${Boost_LIBRARIES})
 
-add_test(TEST_PRINT_IP test_print_ip)
-endif()
+add_test(TEST_PRINT_IP test_print_ip --run_test=PrintIP_Test/PrintIP_string --logger=HRF)
+#endif()
