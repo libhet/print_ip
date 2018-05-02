@@ -31,7 +31,7 @@ void print_ip(T ip, typename std::enable_if<is_stl_container<T>::value, T>::type
 }
 
 void print_ip(std::string ip) {
-    std::cout << ip;
+    std::cout << ip << std::endl;
 }
 
 

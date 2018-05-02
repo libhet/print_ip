@@ -108,4 +108,14 @@ BOOST_AUTO_TEST_SUITE(PrintIP_Test)
         }
     }
 
+    BOOST_AUTO_TEST_CASE(PrintIP_string) {
+        boost::test_tools::output_test_stream output;
+        {
+            cout_redirect guard(output.rdbuf());
+            print_ip("234.123.23.17");
+
+            BOOST_CHECK(output.is_equal("234.123.23.17\n"));
+        }
+    }
+
 BOOST_AUTO_TEST_SUITE_END()
