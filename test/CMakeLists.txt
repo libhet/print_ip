@@ -1,5 +1,6 @@
 if(BUILD_TESTING)
-    project(tests)
+project(tests)
+
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 add_executable(
@@ -14,7 +15,7 @@ set_target_properties(test_print_ip PROPERTIES
             INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIRS}
 )
 
-target_link_libraries(test_print_ip ${Boost_LIBRARIES})
+target_link_libraries(test_print_ip ${Boost_LIBRARIES} print_ip)
 
 add_test(TEST_PRINT_IP test_print_ip)
 endif()
