@@ -16,5 +16,5 @@ set_target_properties(test_print_ip PROPERTIES
 
 target_link_libraries(test_print_ip ${Boost_LIBRARIES})
 
-add_test(TEST_PRINT_IP test_print_ip --run_test=PrintIP_Test --logger=HRF)
+add_test(TEST_PRINT_IP test_print_ip)
 #endif()
