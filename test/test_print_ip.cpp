@@ -77,12 +77,9 @@ BOOST_AUTO_TEST_SUITE(PrintIP_Test)
             print_ip(char(-1));
             print_ip(short(0));
             print_ip(2130706433);
-            print_ip(static_cast<long>(8875824491850138409));
+            print_ip((long long)(8875824491850138409));
 
-            BOOST_CHECK(output.is_equal("255\n"
-                                                "0.0\n"
-                                                "127.0.0.1\n"
-                                                "123.45.67.89.101.112.131.41"));
+            BOOST_CHECK(output.is_equal("255\n0.0\n127.0.0.1\n123.45.67.89.101.112.131.41\n"));
         }
     }
 
