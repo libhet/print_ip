@@ -1,4 +1,4 @@
-
+if(DEBUG_TESTING)
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 add_executable(
@@ -15,5 +15,5 @@ set_target_properties(test_print_ip PROPERTIES
 
 target_link_libraries(test_print_ip ${Boost_LIBRARIES})
 
-add_test(test_print_ip test_print_ip)
-
+add_test(TEST_PRINT_IP test_print_ip)
+endif()
