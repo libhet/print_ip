@@ -1,4 +1,4 @@
-if(DEBUG_TESTING)
+if(BUILD_TESTING)
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 add_executable(
