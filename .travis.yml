@@ -12,6 +12,7 @@ script:
 - cmake --build . --target test
 - cmake --build . --target package
 - sudo dpkg -i print_ip-*.deb && pwd && ls -l
+- doxygen Doxyfile
 deploy:
   provider: script
   skip_cleanup: true
