@@ -1,0 +1,9 @@
+Package: print_ip
+Version: 0.0.21
+Section: devel
+Priority: optional
+Architecture: amd64
+Installed-Size: 23
+Maintainer: shadow.balz@mail.ru
+Description: print_ip built using CMake
+
