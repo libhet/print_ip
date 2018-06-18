@@ -11,10 +11,24 @@ void print_ip(T ip) {
     unsigned int size = sizeof(T) - 1;
     auto char_pointer = reinterpret_cast<unsigned char const*>(&ip);
 
-    for(int i = size; i >= 0; --i) {
-        std::cout << (int)*(char_pointer + i);
-        (i>0)?std::cout << ".":std::cout << std::endl;
+    uint16_t x = 0x0001;
+    if(*((uint8_t *) &x) != 0) {
+        // little-endian
+        for(int i = size; i >= 0; --i) {
+            std::cout << (int)*(char_pointer + i);
+            if(i>0)
+                std::cout << ".";
+        }
     }
+    else {
+        // big-endian
+        for(int i = 0; i <= size; ++i) {
+            std::cout << (int)*(char_pointer + i);
+            if(i<size)
+                std::cout << ".";
+        }
+    }
+
 }
 
 template <typename T>
@@ -25,13 +39,14 @@ void print_ip(T ip, typename std::enable_if<is_stl_container<T>::value, T>::type
             std::cout << ".";
         }
         else {
-            std::cout << std::endl;
+//            std::cout << std::endl;
         }
     }
 }
 
 void print_ip(std::string ip) {
-    std::cout << ip << std::endl;
+    std::cout << ip;
+//    << std::endl;
 }
 
 

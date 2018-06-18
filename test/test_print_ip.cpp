@@ -116,3 +116,24 @@ BOOST_AUTO_TEST_SUITE(PrintIP_Test)
     }
 
 BOOST_AUTO_TEST_SUITE_END()
+
+//BOOST_AUTO_TEST_SUITE(additional tests)
+//
+//    BOOST_AUTO_TEST_CASE(more_than_4_elements) {
+//
+//    }
+//
+//    BOOST_AUTO_TEST_CASE(if_elements_have_value_more_than_255) {
+//
+//    }
+//
+//    BOOST_AUTO_TEST_CASE(negative_values) {
+//
+//    }
+//
+//    BOOST_AUTO_TEST_CASE(vector_of_lists_of_ints) {
+//
+//    }
+//
+//
+//BOOST_AUTO_TEST_SUITE_END()
