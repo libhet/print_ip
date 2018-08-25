@@ -13,6 +13,9 @@ script:
 - cmake --build . --target test
 - cmake --build . --target package
 - tree
+- cat Testing/Temporary/CTestCostData.txt
+- cat Testing/Temporary/LastTest.log
+- cat Testing/Temporary/LastTestsFailed.log
 - sudo dpkg -i print_ip-*.deb && pwd && ls -l
 - doxygen Doxyfile
 deploy:
