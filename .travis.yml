@@ -11,6 +11,7 @@ script:
 - cmake --build .
 - cmake --build . --target test
 - cmake --build . --target package
+- sudo apt-get install tree
 - tree
 - sudo dpkg -i print_ip-*.deb && pwd && ls -l
 - doxygen Doxyfile
