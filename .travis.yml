@@ -5,13 +5,13 @@ before_script:
 - sudo apt-get install graphviz
 - sudo apt-get install doxygen
 - sudo apt-get install libboost-test-dev
+- sudo apt-get install tree
 script:
 - cmake . -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON -DBoost_DEBUG=ON
 - cmake .
 - cmake --build .
 - cmake --build . --target test
 - cmake --build . --target package
-- sudo apt-get install tree
 - tree
 - sudo dpkg -i print_ip-*.deb && pwd && ls -l
 - doxygen Doxyfile
