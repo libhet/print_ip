@@ -75,9 +75,13 @@ BOOST_AUTO_TEST_SUITE(PrintIP_Test)
             cout_redirect guard(output.rdbuf());
 
             print_ip(char(-1));
+            std::cout << std::endl;
             print_ip(short(0));
+            std::cout << std::endl;
             print_ip(2130706433);
+            std::cout << std::endl;
             print_ip((long long)(8875824491850138409));
+            std::cout << std::endl;
 
             BOOST_CHECK(output.is_equal("255\n0.0\n127.0.0.1\n123.45.67.89.101.112.131.41\n"));
         }
@@ -89,6 +93,7 @@ BOOST_AUTO_TEST_SUITE(PrintIP_Test)
             cout_redirect guard(output.rdbuf());
             std::list<int> ip = {156,210,13,49};
             print_ip(ip);
+            std::cout << std::endl;
 
             BOOST_CHECK(output.is_equal("156.210.13.49\n"));
         }
@@ -100,6 +105,7 @@ BOOST_AUTO_TEST_SUITE(PrintIP_Test)
             cout_redirect guard(output.rdbuf());
             std::vector<int> ip = {234,123,23,17};
             print_ip(ip);
+            std::cout << std::endl;
 
             BOOST_CHECK(output.is_equal("234.123.23.17\n"));
         }
@@ -110,6 +116,7 @@ BOOST_AUTO_TEST_SUITE(PrintIP_Test)
         {
             cout_redirect guard(output.rdbuf());
             print_ip("234.123.23.17");
+            std::cout << std::endl;
 
             BOOST_CHECK(output.is_equal("234.123.23.17\n"));
         }
